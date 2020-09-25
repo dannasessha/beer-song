@@ -6,14 +6,15 @@ pub fn verse(n: u32) -> String {
     } else if n == 2 {
         "2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n".to_string()
     } else {
-        let mut compound_string: String = n.to_string();
+	format!("{} bottles of beer on the wall, {} bottles of beer.\nTake one down and pass it around, {} bottles of beer on the wall.\n", n, n, n - 1)
+/*        let mut compound_string: String = n.to_string();
         compound_string.push_str(&" bottles of beer on the wall, ");
         compound_string.push_str(&n.to_string());
         compound_string.push_str(&" bottles of beer.\nTake one down and pass it around, ");
         compound_string.push_str(&(n - 1).to_string());
         compound_string.push_str(&" bottles of beer on the wall.\n");
         compound_string
-    }
+*/    }
 }
 
 pub fn sing(start: u32, end: u32) -> String {
